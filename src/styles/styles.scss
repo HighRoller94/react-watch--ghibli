@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@200;300&family=Poppins&display=swap');
+
+$fontColour: #0c0c0c;
+$titleFont: 'Source Serif Pro', serif;
+$bodyFont: 'Poppins', sans-serif;
+
+@import './components/all';
+@import './pages/all';
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color:#F9F8F6;
+}

@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Martel:wght@200;300&family=Poppins&display=swap");
+.movie__Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  background: none;
+}
+
+.movie__Container .movie__Image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  height: auto;
+}
+
+.movie__Container .movie__Image::before {
+  content: '';
+  display: block;
+  background: url("../../assets/images/bg-wave.svg") 0 0 no-repeat;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 500px;
+  height: 500px;
+  z-index: -1;
+}
+
+.movie__Container .movie__Text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 1.5rem;
+  z-index: 1;
+  position: relative;
+  background-color: transparent;
+}
+
+.movie__Container .movie__Text h1 {
+  font-family: "Source Serif Pro", serif;
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: #0c0c0c;
+}
+
+.movie__Container .movie__Text p {
+  text-align: left;
+  margin-top: 1rem;
+  font-size: .9rem;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  background: none;
+  color: #0c0c0c;
+}
+
+.movie__Container .movie__Text .btn__SeeMore {
+  margin: 2rem 0;
+  padding: .5rem 1rem;
+  font-size: .9rem;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.movie__Container .movie__Text .btn__SeeMore:hover {
+  opacity: .7;
+  cursor: pointer;
+}
+
+.movie__Container .movie__Text .sticker__PNG {
+  position: absolute;
+  top: 25%;
+  right: -5%;
+  opacity: .1;
+  z-index: -1;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  width: 70%;
+}
+
+.movie__Container:nth-child(even) {
+  direction: rtl;
+  margin-right: 10rem;
+}
+
+.movie__Container:nth-child(even) .movie__Text {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-left: 0;
+}
+
+.movie__Container:nth-child(even) .movie__Text p {
+  text-align: left;
+}
+
+.movie__Container:nth-child(even) .sticker__PNG {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+  right: auto;
+  left: -5%;
+}
+
+@media screen and (min-width: 768px) {
+  .movie__Container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .movie__Container .movie__Image {
+    width: 40%;
+  }
+  .movie__Container .movie__Text {
+    margin-left: 1.5rem;
+  }
+  .movie__Container .movie__Text .sticker__PNG {
+    width: 70%;
+    right: -30%;
+  }
+  .movie__Container .movie__Text .btn__SeeMore {
+    font-size: 1rem;
+  }
+  .movie__Container:nth-child(even) .movie__Text {
+    margin-right: 3rem;
+  }
+  .movie__Container:nth-child(even) .movie__Text .sticker__PNG {
+    right: auto;
+    left: -57%;
+  }
+}
+
+@media screen and (min-width: 1312px) {
+  .movie__Container {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .movie__Container .movie__Image {
+    width: 35%;
+  }
+  .movie__Container .movie__Text {
+    margin-top: 2rem;
+    margin-left: 7rem;
+  }
+  .movie__Container .movie__Text p {
+    width: 65%;
+  }
+  .movie__Container .movie__Text .sticker__PNG {
+    top: auto;
+    right: -20%;
+    width: 80%;
+    top: 16%;
+  }
+  .movie__Container:nth-child(even) .movie__Text {
+    margin-right: 7rem;
+  }
+  .movie__Container:nth-child(even) .movie__Text .sticker__PNG {
+    right: auto;
+    width: 80%;
+    top: 16%;
+    left: -40%;
+  }
+}
+
+.movies {
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: 9rem;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  width: 90%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 25px auto;
+  padding-bottom: 100px;
+}
+
+@media screen and (min-width: 768px) {
+  .movies {
+    grid-row-gap: 4rem;
+    margin: 100px auto;
+  }
+}
+
+@media screen and (min-width: 1312px) {
+  .movies {
+    grid-row-gap: 12rem;
+    margin: 150px auto;
+  }
+}
+
+.movie__Page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.movie__Page .movie__About {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: -2rem;
+}
+
+.movie__Page .movie__About .movie__PageImage {
+  width: 80%;
+}
+
+.movie__Page .movie__About .movie__Header {
+  margin: 1.5rem 0;
+  font-weight: 300;
+  font-size: 3rem;
+  color: #0c0c0c;
+  font-family: "Source Serif Pro", serif;
+}
+
+.movie__Page .movie__About .movie__Information {
+  text-align: center;
+}
+
+.movie__Page .movie__About .movie__Information h2 {
+  font-weight: 300;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.movie__Page .movie__About .movie__Information p {
+  margin-top: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.movie__Page .movie__About .back__BTN {
+  margin: 1.8rem 0;
+  padding: .5rem 1rem;
+  font-size: .9rem;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.movie__Page .movie__About .back__BTN:hover {
+  opacity: .7;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .movie__Page .movie__About .movie__PageImage {
+    min-width: 600px;
+    max-width: 700px;
+    width: 100%;
+  }
+  .movie__Page .movie__About .back__BTN {
+    font-size: 1rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #F9F8F6;
+}
+/*# sourceMappingURL=styles.css.map */
